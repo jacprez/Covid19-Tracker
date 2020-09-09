@@ -18,10 +18,12 @@
 }
 
 .info-flag {
-    height: 60px;
-    width: 100%;
-    background-size: cover;
+    height: 50px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: round;
     border-radius: 8px;
+    margin-left: 25px;
    
 }
 

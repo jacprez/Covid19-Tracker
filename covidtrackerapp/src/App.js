@@ -89,6 +89,7 @@ function App() {
         </div>
         <div className="app_stats">
               <InfoBox 
+              isRed
               active={casesType === "cases"}
               onClick={(e) => setCasesType('cases')}
               title="Coronavirus Cases" 
@@ -103,6 +104,7 @@ function App() {
               total={numeral(countryInfo.recovered).format("0,0")} 
               />
               <InfoBox 
+              isGray
               active={casesType === "deaths"}
               onClick={(e) => setCasesType('deaths')}
               title="Deaths" 
@@ -125,7 +127,7 @@ function App() {
             <h3>Live Cases by Country</h3>
             <Table countries={tableData} />
             <h3>Worldwide new {casesType}</h3>
-            <LineGraph casesType={casesType} />
+            <LineGraph className="app_graph" casesType={casesType} />
           </div>
         </CardContent>
       </Card>
